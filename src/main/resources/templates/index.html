@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Access database in Spring using JDBC</title>
+    <link rel="stylesheet" type="text/css" th:href="@{style.css}"/>
+</head>
+<body>
+<h1>Accessing data from MySQL using Java JDBC connection</h1>
+
+<table>
+    <tr>
+        <th>Vendor name</th>
+        <th>Vendor city</th>
+    </tr>
+    <tr  class="row" th:each="Vendor: ${vendorList}">
+        <td th:text="${Vendor.getVendor_name()}"></td>
+        <td th:text="${Vendor.getVendor_city()}"></td>
+    </tr>
+
+</table>
+</body>
+</html>
